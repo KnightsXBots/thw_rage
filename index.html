@@ -1,63 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thw_Rage — Official & Mystical</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thw_Rage — Official</title>
+
+  <!-- Favicon / pfp on head -->
+  <link rel="icon" href="pfp.jpg" type="image/jpeg" />
+
+  <!-- Theme color for some mobile browsers -->
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Simple meta description -->
+  <meta name="description" content="Official presence of Thw_Rage — Black Knight realm. Links to socials, channels and contact." />
 </head>
 <body>
-  <header>
-    <img src="pfp.jpg" alt="Thw_Rage Profile" class="pfp">
-    <h1>Thw_Rage — Official & Mystical</h1>
-    <p class="tagline">$ sudo echo "Black Knight Online..."</p>
-  </header>
+  <div class="page-wrap">
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="pfp-wrap" aria-hidden="true">
+          <img src="pfp.jpg" alt="Thw_Rage profile picture" class="pfp" />
+          <div class="pfp-ring" aria-hidden="true"></div>
+        </div>
 
-  <main>
-    <section class="intro">
-      <h2>The Grimoire</h2> 
-      <p>
-        Welcome, visitor. You’ve reached the official presence of 
-        <strong>Thw_Rage</strong> — a shadowed gateway to my socials, 
-        channels, and contact. Walk carefully.
-      </p>
-    </section>
-
-    <section class="links">
-      <div class="link-card" onclick="openLink('https://t.me/thw_rage')">Telegram</div>
-      <div class="link-card" onclick="openLink('https://t.me/KnightsXBots')">Channel</div>
-      <div class="link-card" onclick="openLink('https://github.com/RageKun/thw_rage')">GitHub</div>
-    </section>
-
-    <section class="qr-block">
-      <h3>Mystic Nexus</h3>
-      <div class="qr-container">
-        <img src="banner.jpg" alt="Banner" class="banner">
-        <div class="qr-box">
-          <input id="mainHandle" value="@thw_rage" readonly>
-          <button onclick="copyText()">Copy</button>
+        <div class="title-block">
+          <h1>Thw_Rage — Official</h1>
+          <p class="tagline"><code>$ sudo echo "Black Knight Online..."</code></p>
+          <div class="micro-meta">
+            <span class="rank">Black Knight</span>
+            <span class="dot">•</span>
+            <span id="year-small"></span>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    <p>© <span id="year"></span> Thw_Rage — Black Knight Realm</p>
-  </footer>
+      <div class="header-banner" role="img" aria-label="Banner">
+        <img src="banner.jpg" alt="Thw_Rage banner" />
+      </div>
+    </header>
 
+    <main class="container">
+      <section class="intro card">
+        <h2>The Black Knight</h2>
+        <p>
+          Welcome, visitor. You’ve reached the official presence of
+          <strong>Thw_Rage</strong> — a shadowed gateway to my socials,
+          channels, and contact. Walk carefully.
+        </p>
+      </section>
+
+      <section class="links card">
+        <!-- Social card (reusable structure) -->
+        <button class="link-card" onclick="openLink('https://t.me/thw_rage')" aria-label="Telegram">
+          <span class="icon" aria-hidden="true">
+            <!-- Telegram SVG -->
+            <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
+          </span>
+          <span class="label">Telegram</span>
+          <small class="sub">@thw_rage</small>
+        </button>
+
+        <button class="link-card" onclick="openLink('https://t.me/KnightsXBots')" aria-label="Telegram Channel">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8 12l2 2 6-6"></path></svg>
+          </span>
+          <span class="label">Channel</span>
+          <small class="sub">KnightsXBots</small>
+        </button>
+
+        <button class="link-card" onclick="openLink('https://github.com/RageKun')" aria-label="GitHub">
+          <span class="icon" aria-hidden="true">
+            <!-- GitHub SVG -->
+            <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 .5C5.8.5.9 5.4.9 11.6c0 4.9 3.2 9 7.6 10.5.6.1.8-.3.8-.6v-2.2c-3.1.7-3.7-1.5-3.7-1.5-.5-1.2-1.3-1.6-1.3-1.6-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.9 2.9 1.3 3.6.9.1-.7.4-1.3.7-1.6-2.5-.3-5.1-1.2-5.1-5.4 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 1.2.9-.2 1.9-.3 2.9-.3 1 0 2 .1 2.9.3 2.1-1.6 3-1.2 3-1.2.6 1.6.2 2.8.1 3.1.7.8 1.1 1.8 1.1 3 0 4.2-2.6 5-5.1 5.3.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.4-1.6 7.6-5.6 7.6-10.5C23.1 5.4 18.2.5 12 .5z"/></svg>
+          </span>
+          <span class="label">GitHub</span>
+          <small class="sub">RageKun</small>
+        </button>
+
+        <button class="link-card" onclick="openLink('https://youtube.com/@thw_rage')" aria-label="YouTube">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"></rect><polygon points="10 9 16 12 10 15 10 9"></polygon></svg>
+          </span>
+          <span class="label">YouTube</span>
+          <small class="sub">@thw_rage</small>
+        </button>
+
+        <button class="link-card" onclick="openLink('https://www.instagram.com/thw_rage/')" aria-label="Instagram">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="3"></circle><path d="M17.5 6.5h.01"></path></svg>
+          </span>
+          <span class="label">Instagram</span>
+          <small class="sub">@thw_rage</small>
+        </button>
+
+        <button class="link-card" onclick="openLink('https://pin.it/2NDRn8g8J')" aria-label="Pinterest">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8.8 20.8c-.3-1.1-.6-2.6-.6-3.9 0-1.1.4-2 1.4-3 .9-.9 2.4-1.6 3.8-1.6 4 0 6.6 2.6 6.6 6 0 3.1-2.1 6.1-6.3 6.1-1.9 0-3.5-.8-4.9-1.6z"></path></svg>
+          </span>
+          <span class="label">Pinterest</span>
+          <small class="sub">Collection</small>
+        </button>
+
+        <button class="link-card" onclick="openLink('https://www.threads.net/@thw_rage')" aria-label="Threads">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M6 6c3 0 4 3 6 3s3-3 6-3"></path></svg>
+          </span>
+          <span class="label">Threads</span>
+          <small class="sub">@thw_rage</small>
+        </button>
+
+        <!-- Extra: X (formerly Twitter) - replace if you want -->
+        <button class="link-card" onclick="openLink('https://x.com/thw_rage')" aria-label="X (Twitter)">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4.5c-.7.3-1.4.5-2.2.6.8-.5 1.4-1.4 1.6-2.4-.8.5-1.7.8-2.7 1-1.5-1.6-4-1.6-5.6-.1-1 1-1.2 2.5-.5 3.7-3.8-.2-7.2-2-9.5-4.7-1 1.6-.5 3.8 1 4.9-.6 0-1.2-.2-1.7-.5v.1c0 2 1.4 3.7 3.3 4.1-.6.2-1.3.2-1.9.1.5 1.6 1.9 2.8 3.6 2.8-1.5 1.2-3.4 1.9-5.3 1.9h-.5c2 1.4 4.4 2.2 6.9 2.2 8.2 0 12.8-6.8 12.8-12.8v-.6c.9-.6 1.6-1.3 2.2-2.2z"></path></svg>
+          </span>
+          <span class="label">X</span>
+          <small class="sub">@thw_rage</small>
+        </button>
+
+      </section>
+
+      <section class="qr-block card">
+        <h3>Psychopath</h3>
+        <div class="qr-container">
+          <img src="banner.jpg" alt="Banner" class="banner" />
+          <div class="qr-box">
+            <input id="mainHandle" value="@thw_rage" readonly aria-label="Main handle" />
+            <button class="btn" onclick="copyText()" aria-label="Copy handle">Copy</button>
+            <button class="btn ghost" onclick="openLink('mailto:')" aria-label="Contact">Contact</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="warning card">
+        <h3>⚠ System Notice</h3>
+        <p class="warn-text">
+          <span class="blink">$ sudo warn:</span>
+          If you intend to hack me, reconsider. I will track you down — and you already know who I am.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Thw_Rage — Black Knight Realm</p>
+    </footer>
+  </div>
+
+  <!-- Minimal JS -->
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // Year fill
+    document.getElementById('year').textContent = new Date().getFullYear();
+    var ys = document.getElementById('year-small');
+    if (ys) ys.textContent = new Date().getFullYear();
 
+    // Open link in new tab safely
     function openLink(url) {
-      window.open(url, '_blank');
+      try {
+        window.open(url, '_blank', 'noopener,noreferrer');
+      } catch (e) {
+        location.href = url;
+      }
     }
 
+    // Copy handle
     function copyText() {
       const input = document.getElementById('mainHandle');
+      if (!input) return;
       input.select();
-      navigator.clipboard.writeText(input.value);
-      alert('Copied handle: ' + input.value);
+      input.setSelectionRange(0, 99999);
+      navigator.clipboard?.writeText(input.value).then(() => {
+        toast('Copied: ' + input.value);
+      }).catch(() => {
+        try {
+          document.execCommand('copy');
+          toast('Copied: ' + input.value);
+        } catch (e) {
+          alert('Copy failed — handle: ' + input.value);
+        }
+      });
+    }
+
+    // Tiny toast
+    function toast(msg) {
+      const el = document.createElement('div');
+      el.className = 'toast';
+      el.textContent = msg;
+      document.body.appendChild(el);
+      setTimeout(() => el.classList.add('visible'), 20);
+      setTimeout(() => el.classList.remove('visible'), 2400);
+      setTimeout(() => el.remove(), 2800);
     }
   </script>
 </body>
-  </html>
+        </html>
+  
